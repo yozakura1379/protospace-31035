@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     if @comment.save
        redirect_to "/prototypes/#{@comment.prototype.id}"
     else
-      　redirect_to "/prototypes/#{@comment.prototype.id}"
+       redirect_to "/prototypes/#{@comment.prototype.id}"
     end
   
   end
