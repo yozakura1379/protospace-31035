@@ -3,6 +3,8 @@
     <div class="user__wrapper">
       <h2 class="page-heading">
         <%= @user.name + "さんの情報" %>
+        <%#= link_to "#{@user.name}さんの情報", user_path(@prototype.user)%>
+        <%#= link_to "#{current_user.name}", user_path(current_user), class: :greeting__link %>
       </h2>
       <table class="table">
         <tbody>

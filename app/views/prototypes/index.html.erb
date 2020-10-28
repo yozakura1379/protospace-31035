@@ -3,9 +3,8 @@
     <%# ログインしているときは以下を表示する %>
       <% if user_signed_in? %>
       <div class="greeting">
-        <%= "こんにちは" %>
-        <%#= link_to "#{current_user.name}", user_path(@prototype.user), class: :greeting__link %>
-        <%= link_to "#{current_user.name}", user_path(current_user), class: :greeting__link %>
+        <%= link_to "こんにちは#{current_user.name}", user_path(current_user), class: :greeting__link %>
+        <%#= link_to "こんにちは#{current_user.name}", user_path(current_user), class: :greeting__link %>
         <%# <%= link_to "#{current_user.name}",  user_registration_path, class: :greeting__link %>
       </div>
       <% else %> 
@@ -19,6 +18,7 @@
     <div class="card__wrapper">
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
       <%= render partial: "prototype", collection: @prototypes %>
+                                           <%# 　　　↑これはprototypes_controller.rb のindexのやつ%>
     </div>
   </div>
 </main>

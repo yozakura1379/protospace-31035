@@ -10,10 +10,10 @@
       <% end %>
     </p>
     <% if current_user %>
-    <%#= link_to "by#{prototype.user.name}", user_path(@prototype.user, method: :get, class: :card__user)  %>
-    <%= link_to "by  #{prototype.user.name}", user_path(current_user, method: :get, class: :card__user)  %>
+     <%#= link_to "by  #{prototype.user.name}", user_path(current_user, method: :get, class: :card__user)  %>
+    <%#= link_to "by  #{prototype.user.name}", user_path(current_user), class: :card__user  %>
+     <%= link_to "by  #{prototype.user.name}", user_path(prototype.user), class: :card__user  %>
     <% end %>
   </div>
 </div>
-
 
